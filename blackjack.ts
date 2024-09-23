@@ -1,25 +1,25 @@
 
-    var sum = 0;
-    let cards = [];
+    var sum: number = 0;
+    let cards: number[] = [];
      
     
     //the player is currently alive
     let isAlive = false; 
-    let hasBlackjack = false;
+    let hasBlackjack= false;
     let message = "";
-    var sumD = document.querySelector("#sumDisplay");
-    var cardsEl = document.querySelector("#cards-el");
-    var messageEl = document.querySelector("#message-el");
+    var sumD: any = document.querySelector("#sumDisplay");
+    var cardsEl: any = document.querySelector("#cards-el");
+    var messageEl: any = document.querySelector("#message-el");
      //in default form the user does not have blackjack
     
     //conditionals for black jack game
     //booleans make our code much more robust
-    var playerEl = document.querySelector("#player-el");
+    /*var playerEl:  string = document.querySelector("#player-el");
     let player = {
      name: "George",
      chips: 149
     }
-    playerEl.textContent = player.name + ":" + player.chips + "$"
+    playerEl.textContent = player.name + ":" + player.chips + "$"*/
    
 function getRandomCard() {
        var number =  Math.floor(Math.random()*13) + 1;
@@ -37,8 +37,8 @@ function getRandomCard() {
     
     function startGame() {
         isAlive = true; //you startin the game means that you are alive.
-        let firstCard = getRandomCard()
-       let secondCard = getRandomCard()
+        let firstCard: number = getRandomCard()
+       let secondCard: number = getRandomCard()
         cards = [firstCard, secondCard]
 sum = firstCard + secondCard;
         renderGame()
