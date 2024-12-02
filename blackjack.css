@@ -1,5 +1,6 @@
 body{
-    background-color: green;
+    background-image: url(./image/blackjack\ image.jpg);
+    background-size: cover;
 text-align: center;
 }
 button{
@@ -9,6 +10,14 @@ button{
     width: 150px;
     height: auto;
     color: white;
-    border: none;
+   
     margin-bottom: 10px;
+}
+#message-el{
+    color:black;
+    font: 40px;
+}
+button{
+    color:red;
+    border-radius: 10px;
 }
