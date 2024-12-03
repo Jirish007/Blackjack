@@ -38,6 +38,7 @@ function getRandomCard() {
     function startGame() {
         isAlive = true; //you startin the game means that you are alive.
         let firstCard = getRandomCard()
+        
        let secondCard  = getRandomCard()
         cards = [firstCard, secondCard]
 sum = firstCard + secondCard;
@@ -45,9 +46,9 @@ sum = firstCard + secondCard;
     }
     
 function renderGame() {
-    cardsEl.textContent ="cards:"
+    cardsEl.textContent =""
     if(sum < 21) {
-        message = "DO YOU WANT TO DRAW A NEW  CARD";
+        message = "DO YOU WANT TO DRAW A NEW  CARD?";
     }
     else if(sum === 21) {
         message = "YOU HAVE BLACKJACK";
@@ -63,8 +64,17 @@ function renderGame() {
 sumD.textContent = "sum:"  + sum;
 var i  = 0
 for(i; i < cards.length; i++){
-    cardsEl.textContent += cards[i] + " ";
+cardsEl.innerHTML += `
+<span id="card${cards[i]}">
+${cards[i]+ " "}
+</span>
+`
+ 
+ 
+   
+;
 }
+ 
 };
 
 function newCard() {
