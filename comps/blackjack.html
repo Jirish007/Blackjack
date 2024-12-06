@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="blackjack.css">
+        <title>
+Jack's blackjack
+        </title>
+    </head>
+    <body id="gameBody" onload="preparingGameLaunch()">
+ 
+<h1>Black jack </h1>
+
+<audio autoplay loop>
+    <source src="./music/ins control.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+  <!--Additional codes for music player-->
+  
+<br>
+<br>
+<h1 id="message-el">Do you want to play a round?</h1>
+<br>
+<h2 class="cardsHeader">Cards:</h2>
+<div class="cards">
+   
+<section>
+    <h2>
+<p id="cards-el"></p>
+    </h2>
+</section>
+
+</div>
+
+
+<h2 id="sumDisplay">sum:</h2>
+
+<button onclick="startGame()">START GAME</button><br>
+
+<button onclick="newCard()">
+    DRAW NEW CARDS
+</button>
+
+    </body>
+    <script src="blackjack.js">
+
+    </script>
+    <script src="./game-cover.js"></script>
+</html>

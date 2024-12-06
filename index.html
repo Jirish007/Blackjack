@@ -3,40 +3,26 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="blackjack.css">
+     <link rel="stylesheet" href="game-cover.css">
         <title>
-Blackjack game
+Jack's blackjack
         </title>
     </head>
-    <body>
-<h1>Black jack </h1>
+    <body id="gameCover">
+        <h1>This is the game's cover page</h1>
+        <!--1 So here we will have an animation while the game is  loading(Require an animation(a moving one))
+       2 A bootstrap loading
 
-<br>
-<br>
-<h1 id="message-el">Do you want to play a round?</h1>
-<br>
-<h2 class="cardsHeader">Cards:</h2>
-<div class="cards">
-   
-<section>
-    <h2>
-<p id="cards-el"></p>
-    </h2>
-</section>
+       3 we will implement a logic to display the screen for a couple  sec while loading necessary game data(settimeout and setintervals).
 
-</div>
+       4 music to play in the bg while it is loading
 
 
-<h2 id="sumDisplay">sum:</h2>
-
-<button onclick="startGame()">START GAME</button><br>
-
-<button onclick="newCard()">
-    DRAW NEW CARDS
-</button>
-
+        
+        -->
     </body>
-    <script src="blackjack.js">
+    <script src="./comps/blackjack.js">
 
     </script>
+    <script src="game-cover.js"></script>
 </html>
