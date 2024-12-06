@@ -8,7 +8,7 @@
 Jack's blackjack
         </title>
     </head>
-    <body id="gameCover">
+    <body>
         <h1>This is the game's cover page</h1>
         <!--1 So here we will have an animation while the game is  loading(Require an animation(a moving one))
        2 A bootstrap loading
@@ -20,9 +20,13 @@ Jack's blackjack
 
         
         -->
+        <div class="progress-container">
+            <div class="progress-bar" id="progress-bar"></div>
+            <div class="progress-text" id="progress-text">0%</div>
+          </div>
+          
+          
     </body>
-    <script src="./comps/blackjack.js">
-
-    </script>
+    <script src="./comps/blackjack.js"></script>
     <script src="game-cover.js"></script>
 </html>

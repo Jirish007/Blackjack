@@ -96,3 +96,36 @@ margin-right: 0.5rem;
 }
 /* Add animation if you have blackjack someone pops up and wins while if you lose a screen pops up statingthat you have lost the game/search coding animations*/
 
+.progress, .alert {
+    margin: 15px;
+}
+
+.alert {
+    display: none;
+}
+
+
+
+#blackjack-video {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    z-index: 1000;
+  }
+
+  #blackjack-lose{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    z-index: 1000;
+  }
+  
+  

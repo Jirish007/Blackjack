@@ -52,16 +52,22 @@ function renderGame() {
     cardsEl.textContent =""
     if(sum < 21) {
         message = "DO YOU WANT TO DRAW A NEW  CARD?";
+
+       
+
     }
     else if(sum === 21) {
         message = "YOU HAVE BLACKJACK";
      
         hasBlackjack = true;
+        showBlackjackVideo();
+
         //this makes it feel much more like a game
     }
     else{
         message = "BETTER LUCK NEXT TIME";
         isAlive = false;
+        showBlackjackVideoLose()
     }
     messageEl.textContent = message;
   
@@ -88,3 +94,56 @@ function newCard() {
     }
   
 }
+
+
+
+
+
+
+
+
+function showBlackjackVideo() {
+    const video = document.getElementById('blackjack-video');
+    video.style.display = 'block';
+    video.play();
+  
+    // redirect back to game after video finishes playing
+    video.onended = () => {
+      video.style.display = 'none';
+      startGame(); // restart the game
+    };
+  }
+  
+  function showBlackjackVideoLose() {
+    const video = document.getElementById('blackjack-lose');
+    video.style.display = 'block';
+    video.play();
+  
+    // redirect back to game after video finishes playing
+    video.onended = () => {
+      video.style.display = 'none';
+      startGame(); // restart the game
+    };
+  }
+  
+
+
+//blackjack
+
+var $progress = $('.progress');
+var $progressBar = $('.progress-bar');
+var $alert = $('.alert');
+
+setTimeout(function() {
+    $progressBar.css('width', '10%');
+    setTimeout(function() {
+        $progressBar.css('width', '30%');
+        setTimeout(function() {
+            $progressBar.css('width', '100%');
+            setTimeout(function() {
+                $progress.css('display', 'none');
+                $alert.css('display', 'block');
+            }, 500); // WAIT 5 milliseconds
+        }, 2000); // WAIT 2 seconds
+    }, 1000); // WAIT 1 seconds
+}, 1000); // WAIT 1 second
