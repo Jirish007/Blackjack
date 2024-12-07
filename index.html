@@ -5,27 +5,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <link rel="stylesheet" href="game-cover.css">
         <title>
-Jack's blackjack
+Jack's blackjacks
         </title>
     </head>
-    <body>
-        <h1>This is the game's cover page</h1>
-        <!--1 So here we will have an animation while the game is  loading(Require an animation(a moving one))
-       2 A bootstrap loading
-
-       3 we will implement a logic to display the screen for a couple  sec while loading necessary game data(settimeout and setintervals).
-
-       4 music to play in the bg while it is loading
-
-
-        
-        -->
+    <body onload="Gamestart()">
+   
+        <div class="game-title">
+        <h1>Blackjack game</h1>
+        </div>
         <div class="progress-container">
-            <div class="progress-bar" id="progress-bar"></div>
-            <div class="progress-text" id="progress-text">0%</div>
+            <div class="progress-bar" id="progress-bar">
+                <h3>loading...</h3>
+            </div>
+    
           </div>
-          
-          
     </body>
     <script src="./comps/blackjack.js"></script>
     <script src="game-cover.js"></script>

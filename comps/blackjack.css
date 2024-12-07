@@ -128,4 +128,8 @@ margin-right: 0.5rem;
     z-index: 1000;
   }
   
+  .repeat{
+    display: inline-block;
+    display: none;
+  }
   

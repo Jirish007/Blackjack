@@ -10,32 +10,6 @@ Jack's blackjack
     </head>
     <body id="gameBody" onload="preparingGameLaunch()">
  
-<h1>Black jack </h1>
-
-
-
-<audio id="background-music" loop autoplay>
-    <source src="./music/in control.mp3" type="audio/mp3">
-    Your browser does not support the audio element.
-  </audio>
-  
-  
-
-  
-<video id="blackjack-video" width="100%" height="100%" controls muted>
-    <source src="./video/Wii Sports _You Win_ HD Green Screen.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-  
-
-  <video id="blackjack-lose" width="100%" height="100%" controls muted>
-    <source src="./video/Wii Sports _You Lose_ Green Screen.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-  
-  <!--Additional codes for music player-->
-  
-<br>
 <br>
 <h1 id="message-el">Do you want to play a round?</h1>
 <br>
@@ -53,12 +27,14 @@ Jack's blackjack
 
 <h2 id="sumDisplay">sum:</h2>
 
-<button onclick="startGame()">START GAME</button><br>
+<button onclick="startGame()" id="start">START GAME</button><br>
 
 <button onclick="newCard()">
+   
     DRAW NEW CARDS
 </button>
-
+<br>
+<button onclick="Repeat()" class="repeat">Restart game</button>
     </body>
     <script src="blackjack.js">
 

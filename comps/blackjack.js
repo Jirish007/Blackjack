@@ -11,16 +11,14 @@
     var cardsEl = document.querySelector("#cards-el");
     var messageEl = document.querySelector("#message-el");
     const gameBody = document.querySelector('#gameBody')
+    var start = document.querySelector('#start')
+    var repeat = document.querySelector(".repeat")
      //in default form the user does not have blackjack
     
     //conditionals for black jack game
     //booleans make our code much more robust
     var playerEl = document.querySelector("#player-el");
-    let player = {
-     name: "George",
-     chips: 149
-    }
-    playerEl.textContent = player.name + ":" + player.chips + "$"
+    
    
 function getRandomCard() {
        var number =  Math.floor(Math.random()*13) + 1;
@@ -44,7 +42,9 @@ function getRandomCard() {
         cards = [firstCard, secondCard]
 sum = firstCard + secondCard;
         renderGame()
-      
+      if(start){
+       start.style.display = "none"
+      }
     }
     
 function renderGame() {
@@ -60,14 +60,16 @@ function renderGame() {
         message = "YOU HAVE BLACKJACK";
      
         hasBlackjack = true;
-        showBlackjackVideo();
+       repeat.style.display ="inline-block"
 
         //this makes it feel much more like a game
     }
     else{
         message = "BETTER LUCK NEXT TIME";
         isAlive = false;
-        showBlackjackVideoLose()
+    
+     repeat.style.display ="inline-block"
+    
     }
     messageEl.textContent = message;
   
@@ -94,56 +96,7 @@ function newCard() {
     }
   
 }
+function Repeat(){
 
-
-
-
-
-
-
-
-function showBlackjackVideo() {
-    const video = document.getElementById('blackjack-video');
-    video.style.display = 'block';
-    video.play();
-  
-    // redirect back to game after video finishes playing
-    video.onended = () => {
-      video.style.display = 'none';
-      startGame(); // restart the game
-    };
-  }
-  
-  function showBlackjackVideoLose() {
-    const video = document.getElementById('blackjack-lose');
-    video.style.display = 'block';
-    video.play();
-  
-    // redirect back to game after video finishes playing
-    video.onended = () => {
-      video.style.display = 'none';
-      startGame(); // restart the game
-    };
-  }
-  
-
-
-//blackjack
-
-var $progress = $('.progress');
-var $progressBar = $('.progress-bar');
-var $alert = $('.alert');
-
-setTimeout(function() {
-    $progressBar.css('width', '10%');
-    setTimeout(function() {
-        $progressBar.css('width', '30%');
-        setTimeout(function() {
-            $progressBar.css('width', '100%');
-            setTimeout(function() {
-                $progress.css('display', 'none');
-                $alert.css('display', 'block');
-            }, 500); // WAIT 5 milliseconds
-        }, 2000); // WAIT 2 seconds
-    }, 1000); // WAIT 1 seconds
-}, 1000); // WAIT 1 second
+window.location.href = "blackjack.html"
+}
