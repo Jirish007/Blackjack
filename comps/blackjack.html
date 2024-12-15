@@ -1,43 +1,33 @@
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="blackjack.css">
-        <title>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="blackjack.css">
+<title>
 Jack's blackjack
-        </title>
-    </head>
-    <body id="gameBody" onload="preparingGameLaunch()">
- 
+</title>
+</head>
+<body id="gameBody" onload="preparingGameLaunch()">
 <br>
 <h1 id="message-el">Do you want to play a round?</h1>
 <br>
 <h2 class="cardsHeader">Cards:</h2>
 <div class="cards">
-   
 <section>
-    <h2>
+<h2>
 <p id="cards-el"></p>
-    </h2>
+</h2>
 </section>
-
 </div>
-
-
 <h2 id="sumDisplay">sum:</h2>
-
 <button onclick="startGame()" id="start">START GAME</button><br>
-
 <button onclick="newCard()">
-   
-    DRAW NEW CARDS
+DRAW NEW CARDS
 </button>
 <br>
 <button onclick="Repeat()" class="repeat">Restart game</button>
-    </body>
-    <script src="blackjack.js">
-
-    </script>
-    <script src="./game-cover.js"></script>
+</body>
+<script src="blackjack.js"></script>
+<script src="./game-cover.js"></script>
 </html>
